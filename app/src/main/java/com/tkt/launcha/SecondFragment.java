@@ -23,7 +23,7 @@ public class SecondFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_contactos, container, false);
 
         TextView textView = (TextView) v.findViewById(R.id.section_label2);
-        textView.setText("ss9");
+        textView.setText("Contacts");
 
         //
         Customlistadapter adapter = new Customlistadapter(getActivity(), image_id, color_names);
