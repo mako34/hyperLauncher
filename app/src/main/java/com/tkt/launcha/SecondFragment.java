@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 import android.widget.TextView;
 
 /**
@@ -13,12 +14,22 @@ import android.widget.TextView;
 
 public class SecondFragment extends Fragment {
 
+
+    String color_names[] = {"red", "green", "blue", "yellow", "pink", "brown"};
+    Integer image_id[] = {R.drawable.pin, R.drawable.radar, R.drawable.pin, R.drawable.radar, R.drawable.pin, R.drawable.radar};
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_contactos, container, false);
 
         TextView textView = (TextView) v.findViewById(R.id.section_label2);
         textView.setText("ss9");
+
+        //
+        Customlistadapter adapter = new Customlistadapter(getActivity(), image_id, color_names);
+        ListView lv = (ListView) v.findViewById(R.id.listView);
+        lv.setAdapter(adapter);
+        //
 
         return v;
     }

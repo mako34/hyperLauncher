@@ -7,6 +7,7 @@
     <com.tomerrosenfeld.customanalogclockview.CustomAnalogClock
         android:id="@+id/analog_clock"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"/>
 
 </RelativeLayout>
